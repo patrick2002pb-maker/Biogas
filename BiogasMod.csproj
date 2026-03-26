@@ -7,6 +7,13 @@
     <AssemblyName>BiogasMod</AssemblyName>
   </PropertyGroup>
 
+<Reference Include="Assembly-CSharp">
+  <HintPath>D:\Programme\Steam\steamapps\common\Captain of Industry\Captain of Industry_Data\Managed\Assembly-CSharp.dll</HintPath>
+</Reference>
+<Reference Include="UnityEngine">
+  <HintPath>D:\Programme\Steam\steamapps\common\Captain of Industry\Captain of Industry_Data\Managed\UnityEngine.dll</HintPath>
+</Reference>
+
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
