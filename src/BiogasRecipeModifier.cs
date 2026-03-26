@@ -1,48 +1,18 @@
-using System;
-using System.Collections.Generic;
+using Mafi.Core.Mods;
 
-namespace BiogasRecipeModifierNamespace
+public class BessereBiogasanlage : IMod
 {
-    public class BiogasRecipeModifier
+    public string Name => "Bessere Biogasanlage";
+    public int Version => 1;
+    public string Author => "patrick2002pb-maker";
+
+    public void Initialize(IModContext context)
     {
-        private Dictionary<string, float> recipes;
+        Console.WriteLine("Bessere Biogasanlage Mod loaded!");
+    }
 
-        public BiogasRecipeModifier()
-        {
-            recipes = new Dictionary<string, float>();
-        }
-
-        public void AddRecipe(string ingredient, float yield)
-        {
-            if(!recipes.ContainsKey(ingredient))
-            {
-                recipes.Add(ingredient, yield);
-            }
-        }
-
-        public void ModifyRecipe(string ingredient, float newYield)
-        {
-            if(recipes.ContainsKey(ingredient))
-            {
-                recipes[ingredient] = newYield;
-            }
-        }
-
-        public void RemoveRecipe(string ingredient)
-        {
-            if(recipes.ContainsKey(ingredient))
-            {
-                recipes.Remove(ingredient);
-            }
-        }
-
-        public float GetYield(string ingredient)
-        {
-            if(recipes.TryGetValue(ingredient, out float yield))
-            {
-                return yield;
-            }
-            return 0;
-        }
+    public void PostLoad()
+    {
+        Console.WriteLine("Bessere Biogasanlage Mod post-load complete!");
     }
 }
